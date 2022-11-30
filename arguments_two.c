@@ -6,13 +6,12 @@
 /*   By: rhortens <rhortens@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 20:42:32 by rhortens          #+#    #+#             */
-/*   Updated: 2022/11/28 20:53:20 by rhortens         ###   ########.fr       */
+/*   Updated: 2022/11/30 20:05:19 by rhortens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <printf.h>
-#include <libft.h>
-#include <stdarg.h>
+#include "ft_printf.h"
+#include "libft.h"
 
 int	arg_p(va_list args)
 {
@@ -21,10 +20,10 @@ int	arg_p(va_list args)
 
 	hex = (unsigned long)va_arg(args, void *);
 	str = "0123456789abcdef";
-	ft_putchar("0x");
+	ft_putstr_fd("0x", 1);
 	if (hex == 0)
 	{
-		ft_putchar("0");
+		write(1, "0", 1);
 		return (3);
 	}
 	else
@@ -41,7 +40,7 @@ int	arg_x(va_list args)
 	str = "0123456789abcdef";
 	if (hex == 0)
 	{
-		ft_putchar("0");
+		write(1, "0", 1);
 		return (1);
 	}
 	else
@@ -58,7 +57,7 @@ int	arg_cap_x(va_list args)
 	str = "0123456789ABCDEF";
 	if (hex == 0)
 	{
-		ft_putchar("0");
+		write(1, "0", 1);
 		return (1);
 	}
 	else

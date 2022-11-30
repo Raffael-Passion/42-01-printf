@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   helpers.c                                          :+:      :+:    :+:   */
+/*   helpers_one.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhortens <rhortens@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 19:28:45 by rhortens          #+#    #+#             */
-/*   Updated: 2022/11/28 20:24:15 by rhortens         ###   ########.fr       */
+/*   Updated: 2022/11/30 20:05:19 by rhortens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <printf.h>
-#include <libft.h>
-#include <stdarg.h>
+#include "ft_printf.h"
+#include "libft.h"
 
 void	ft_putchar(char c)
 {
 	write(1, &c, 1);
 }
-
+/*
 void	ft_putstr(char *s)
 {
 	write(1, s, ft_strlen(s));
@@ -41,6 +40,7 @@ void	ft_putnbr(int n)
 	else
 		ft_putchar(n + '0');
 }
+*/
 
 void	ft_putnbr_u(unsigned int n)
 {

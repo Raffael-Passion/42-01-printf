@@ -6,13 +6,12 @@
 /*   By: rhortens <rhortens@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 14:17:24 by rhortens          #+#    #+#             */
-/*   Updated: 2022/11/28 20:01:42 by rhortens         ###   ########.fr       */
+/*   Updated: 2022/11/30 20:05:19 by rhortens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <printf.h>
-#include <libft.h>
-#include <stdarg.h>
+#include "ft_printf.h"
+#include "libft.h"
 
 int	ft_format(const char *str, int i, va_list args)
 {
@@ -35,7 +34,7 @@ int	ft_format(const char *str, int i, va_list args)
 		size += arg_cap_x(args);
 	else if (str[i] == '%')
 	{
-		ft_putchar("%");
+		ft_putstr_fd("%", 1);
 		size = 1;
 	}
 	return (size);
@@ -47,8 +46,6 @@ int	ft_printf(const char *str, ...)
 	int		size;
 	int		i;
 
-	if (str == NULL)
-		return (NULL);
 	va_start (args, str);
 	i = 0;
 	size = 0;
@@ -61,7 +58,7 @@ int	ft_printf(const char *str, ...)
 		}
 		else
 		{
-			ft_putchar(str[i]);
+			ft_putchar_fd(str[i], 1);
 			size++;
 		}
 		i++;

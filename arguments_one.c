@@ -6,20 +6,19 @@
 /*   By: rhortens <rhortens@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 17:54:06 by rhortens          #+#    #+#             */
-/*   Updated: 2022/11/28 20:48:59 by rhortens         ###   ########.fr       */
+/*   Updated: 2022/11/30 20:05:19 by rhortens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <printf.h>
-#include <libft.h>
-#include <stdarg.h>
+#include "ft_printf.h"
+#include "libft.h"
 
 int	arg_c(va_list args)
 {
 	char	c;
 
 	c = va_arg(args, int);
-	ft_putchar(c);
+	ft_putchar_fd(c, 1);
 	return (1);
 }
 
@@ -30,15 +29,18 @@ int	arg_s(va_list args)
 
 	str = va_arg(args, char *);
 	i = 0;
-	if (str && str[i] != 0)
+	if (str)
 	{
-		ft_putchar(str[i]);
-		i++;
+		while (str[i] != 0)
+		{
+			ft_putchar_fd(str[i], 1);
+			i++;
+		}
 	}
 	else
 	{
-		ft_putchar("NULL");
-		return (4);
+		ft_putstr_fd("(null)", 1);
+		return (6);
 	}
 	return (ft_strlen(str));
 }
@@ -50,7 +52,7 @@ int	arg_di(va_list args)
 
 	d = va_arg(args, int);
 	i = 0;
-	ft_putnbr(d);
+	ft_putnbr_fd(d, 1);
 	if (d == 0)
 		i++;
 	if (d < 0)
@@ -68,17 +70,17 @@ int	arg_di(va_list args)
 
 int	arg_u(va_list args)
 {
-	unsigned int	u;
+	unsigned int	n;
 	int				i;
 
-	u = va_arg(args, unsigned int);
+	n = va_arg(args, unsigned int);
 	i = 0;
-	ft_putnbr_u(u);
-	if (u == 0)
+	ft_putnbr_u(n);
+	if (n == 0)
 		i++;
-	while (u)
+	while (n)
 	{
-		u = u / 10;
+		n = n / 10;
 		i++;
 	}
 	return (i);
