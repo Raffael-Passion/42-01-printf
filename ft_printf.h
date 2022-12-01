@@ -6,7 +6,7 @@
 /*   By: rhortens <rhortens@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 18:15:15 by rhortens          #+#    #+#             */
-/*   Updated: 2022/12/01 12:52:54 by rhortens         ###   ########.fr       */
+/*   Updated: 2022/12/01 17:31:53 by rhortens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <string.h>
 # include <stdarg.h>
+# include <stdio.h>
 
 int		arg_c(va_list args);
 int		arg_s(va_list args);
