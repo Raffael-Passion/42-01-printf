@@ -6,11 +6,11 @@
 /*   By: rhortens <rhortens@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 13:38:39 by rhortens          #+#    #+#             */
-/*   Updated: 2022/11/05 20:21:35 by rhortens         ###   ########.fr       */
+/*   Updated: 2022/12/05 17:41:52 by rhortens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {

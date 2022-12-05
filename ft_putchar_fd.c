@@ -6,11 +6,11 @@
 /*   By: rhortens <rhortens@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 13:27:18 by rhortens          #+#    #+#             */
-/*   Updated: 2022/11/30 18:53:24 by rhortens         ###   ########.fr       */
+/*   Updated: 2022/12/05 17:41:52 by rhortens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 void	ft_putchar_fd(char c, int fd)
 {

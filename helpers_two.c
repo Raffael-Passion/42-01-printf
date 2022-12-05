@@ -6,18 +6,17 @@
 /*   By: rhortens <rhortens@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 20:23:34 by rhortens          #+#    #+#             */
-/*   Updated: 2022/12/01 16:51:01 by rhortens         ###   ########.fr       */
+/*   Updated: 2022/12/05 17:41:52 by rhortens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft.h"
 
 /*
 convert_hex is used to convert the args of unsigned long hex.
 as long as hex > 15, recursion is used and hex gets
 divided by 16 and modulo 16. 16 because hex has base of 16.
-if it is not > 16 anymore, str[hex] will be put out with ft_putchar_fd
+if it is not > 15 anymore, str[hex] will be put out with ft_putchar_fd
 */
 void	convert_hex(unsigned long hex, char *str)
 {

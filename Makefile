@@ -6,7 +6,7 @@
 #    By: rhortens <rhortens@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/30 18:26:28 by rhortens          #+#    #+#              #
-#    Updated: 2022/12/01 12:52:54 by rhortens         ###   ########.fr        #
+#    Updated: 2022/12/05 17:39:42 by rhortens         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,8 +27,6 @@ FILES	=	arguments_one.c \
 COMP	= cc
 
 PRINTF	= ft_printf.h
-
-LIBFT	= libft.h
 
 OBJS	= $(FILES:.c=.o)
 

@@ -6,11 +6,11 @@
 /*   By: rhortens <rhortens@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 17:01:56 by rhortens          #+#    #+#             */
-/*   Updated: 2022/11/24 14:01:55 by rhortens         ###   ########.fr       */
+/*   Updated: 2022/12/05 17:41:52 by rhortens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 size_t	ft_strlen(const char *str)
 {

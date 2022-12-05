@@ -6,12 +6,11 @@
 /*   By: rhortens <rhortens@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 17:54:06 by rhortens          #+#    #+#             */
-/*   Updated: 2022/12/01 16:48:43 by rhortens         ###   ########.fr       */
+/*   Updated: 2022/12/05 17:41:52 by rhortens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft.h"
 
 /*
 arg_c of pointer to the list of arguments:

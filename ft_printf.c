@@ -6,12 +6,11 @@
 /*   By: rhortens <rhortens@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 14:17:24 by rhortens          #+#    #+#             */
-/*   Updated: 2022/12/01 17:31:53 by rhortens         ###   ########.fr       */
+/*   Updated: 2022/12/05 19:15:31 by rhortens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft.h"
 
 /*
 ft_format checks the char after the percent sign,
@@ -68,6 +67,8 @@ int	ft_printf(const char *str, ...)
 	int		size;
 	int		i;
 
+	if (!str)
+		return (0);
 	va_start (args, str);
 	i = 0;
 	size = 0;
@@ -92,9 +93,12 @@ int	ft_printf(const char *str, ...)
 /*
 int	main(void)
 {
-	int	ret;
-	ret = ft_printf("%c %d %o %x %s\n", 'A', 10, 100, 1000, "Hello from printf!");
-	printf("printf returns %d bytes\n", ret);
-	return (0);
+	int	i;
+	int	j;
+
+	i = printf(" %c ", '0');
+	j = ft_printf(" %c ", '0');
+
+	printf("\n%d\n%d", i, j);
 }
 */
