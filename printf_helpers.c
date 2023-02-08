@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   helpers_two.c                                      :+:      :+:    :+:   */
+/*   printf_helpers.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rhortens <rhortens@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/28 20:23:34 by rhortens          #+#    #+#             */
-/*   Updated: 2022/12/05 17:41:52 by rhortens         ###   ########.fr       */
+/*   Updated: 2023/02/08 20:41:29 by rhortens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,18 @@ int	hexlen(unsigned long hex)
 		i++;
 	}
 	return (i);
+}
+
+void	ft_putnbr_u(unsigned int n)
+{
+	if (n >= 10)
+	{
+		ft_putnbr_u(n / 10);
+		ft_putchar_fd(n % 10 + '0', 1);
+	}
+	else
+	{
+		n += 48;
+		ft_putchar_fd(n, 1);
+	}
 }
